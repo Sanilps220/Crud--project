@@ -1,0 +1,39 @@
+<header>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+              {{#if user}}
+            <a class="navbar-brand"> <H1 class="" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Hallo  {{user.Name}} !</H1> </Details></a>
+            {{else}}
+             <a class="navbar-brand"  style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Welcome</Details></a>
+                {{/if}}
+
+
+ 
+
+           
+
+
+            <div class="btn-group">
+                {{#if user}}
+                
+                    <td><a href="/logout" class="btn btn-primary">Logout</a></td>
+                {{else}}
+                
+                             
+                    <td><a href="/login" class="btn btn-outline-primary pt-3">User login</a></td>
+                 
+                 <br>
+                <button type="button" class="btn btn-primary">
+                     <a href="/admin/login" class="btn btn-">Admin login</a>
+                </button>
+                
+                </div>
+                 {{/if}}          
+          
+
+
+
+            
+        </div>
+    </nav>
+</header>

@@ -1,0 +1,41 @@
+<section>
+    <a href="/admin">Back</a>
+    <div class="container mt-4">
+        <div class="row">
+
+            <div class="col-md-6">
+                <h2 class="text-center">Add New</h2>
+                <form name="myform" action="/admin/add-products"  onsubmit="return validateForm()" method="post" enctype="">
+
+                    <label for="" class="form-label">Name</label>
+                    <input type="text" name="Name" class="form-control" >
+                   
+
+                    <label for="" class="form-label">Email address</label>
+                    <input type="email" name="Email" class="form-control" >
+                   
+
+                    <label for="" class="form-label">Details</label>
+                    <input type="text" name="Password" class="form-control">
+
+                    
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+function validateForm() {
+  let x = document.forms["myform"]["Name"].value;
+  let y = document.forms["myform"]["Password"].value;
+  if (x == "" ) {
+    alert("Name must be filled out");
+    return false;
+  }else if (y == "" ) {
+    alert("Password must be filled out");
+    return false;
+  }else
+    alert('you submitted the form');
+}
+</script>

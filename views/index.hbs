@@ -1,0 +1,17 @@
+<section>
+    <div class="container mt-5">
+    <div class="row d-flex">
+    {{#each products}}
+    <div class="col-md-3">
+        <ul class="list-group" style="width: 18rem;">
+            <li class="list-group-item" src="">{{this.name}}</li>
+
+            <li class="list-group-item list-group-item-primary" src="">{{this.email}}</li>
+            <li class="list-group-item list-group-item-secondary">{{this.password}}</li>
+            <li>more deteils >></li>
+        </ul>
+    </div>
+    {{/each}}
+    </div>
+    </div>
+</section>

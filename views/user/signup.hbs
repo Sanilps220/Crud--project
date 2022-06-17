@@ -1,0 +1,64 @@
+
+<div class="container sit-op">
+    <h3>Create new account</h3>
+    <form name="myform" action="/signup" method="post"  onsubmit="return validateform()">
+     <p class="error" id="mylocation"></p>
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" name="Name">
+            <small id="text" class="form-text text-muted"></small>
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Email address</label>
+            <input type="email" class="form-control" name="Email" >
+            <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="Password">
+        </div>
+        <div>
+          <a href="/login">Allreadey have account</a>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-5" style="">Login</button>
+    </form>
+</div>
+
+
+<script  type="text/javascript">  
+function validateform(){  
+var name=document.myform.Name.value;  
+var email=document.myform.Email.value;  
+var password=document.myform.Password.value;
+
+if (name==null || name==""){  
+    msg="Name can't be blank"
+  document.getElementById('mylocation').innerText=msg;  
+  return false;  
+}
+else if(email==null || email=="" ){   
+    msg="Email id can't be blank"
+  document.getElementById('mylocation').innerText=msg;  
+  return false;   
+}
+
+else if(password.length<6){  
+    msg="Password must be at least 6 characters long."
+  document.getElementById('mylocation').innerText=msg;  
+  return false;  
+  }else{
+    var v= confirm("confirm?");  
+  
+  }
+} 
+</script>
+
+ {{!-- if(v==true){  
+alert("You are loggined Sucesfully");  
+}  
+else{  
+alert("cancel");  
+} --}}

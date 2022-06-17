@@ -1,0 +1,42 @@
+<section >
+     {{#if user}}
+                 
+    <h1>Peoples</h1>
+   
+
+
+   
+    <div class="container mt-5">
+        <div class="row ">
+             {{#each products}}
+               <div class="col-md-3 m-2" style=" padding: 5px;"> 
+                   
+                    <div class="card-body">
+    <h5 class="card-title ">{{this.Name}}</h5>
+    <p class="card-text">Hai, how i can help you.</p>
+  </div>
+         
+                <ul class="list-group" style="width: 18rem;">
+                    <li class="list-group-item" src="">{{this.Name}}</li>
+
+                    <li class="list-group-item list-group-item-primary" src="">{{this.Email}}</li>
+                    <li class="list-group-item list-group-item-secondary">more..{{this.password}}</li>
+
+                </ul>
+              
+            </div>
+        
+    {{/each}}
+     {{else}}
+    <body style=" background-color: lightblue;  ">
+        <div class="container pt-5" style=" font-weight:300;  font-size: 30px; line-height: 1.58; font-family: HelveticaNeue-Light, Helvetica Neue Light, Helvetica Neue, 
+  Helvetica, Arial, Lucida Grande, sans-serif;">
+            <p>Hi there! Welcome to our website. Ask us anything.<br>
+             If you need any assistance, I’m always here.<br>
+             Create an Account today. We are online and ready to help!</p>
+        </div>
+    </body>
+                {{/if}}
+    </div>
+    </div>
+</section>

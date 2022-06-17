@@ -1,0 +1,68 @@
+
+<h1>All User Details</h1>
+<section>
+    <div class="container">
+
+     <td> 
+                            <a href="/admin/add-users" class="btn btn-success"style="margin-left: 50%;" >Add User</a> 
+                        </td>
+                       
+    <table class="table mt-5" id="productsTable">
+        
+        <thead>
+            <tr>
+                <th scope="col">No</th>
+                <th scope="col">Name</th>
+                <th scope="col">Email id</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            {{#each products}}
+           
+
+                
+                    <tr>
+                       <td>
+                           <ol></ol>
+                       </td>
+                        <td>
+                            <li class="list-group-item">{{this.Name}}</li>
+                        </td>
+                        <td>
+                            <li class="list-group-item list-group-item-primary" src="">{{this.Email}}</li>
+                        </td>
+                        <td>
+                             <a href="/admin/delete-user/{{this._id}}" class="btn btn-danger"
+                              onclick="return confirm('Are you sure want to delete{{this.Name}}?')">Delete</a>
+
+                        </td>
+                       
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+
+
+
+
+
+
+
+            </ul>
+            
+          </div>  
+            
+</section>
+<script>
+
+  const myCollection = document.getElementsByTagName("ol");
+  var b = myCollection.length
+  let i =0
+  for ( i; i < b; i++) {
+    myCollection[i].innerHTML = i+1;
+  }
+
+</script>

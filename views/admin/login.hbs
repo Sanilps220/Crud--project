@@ -1,0 +1,37 @@
+<div class="container">
+    <h3>Admin login</h3>
+    <form name="myform" action="/admin/login" method="POST" onsubmit="return validateform()" >
+        {{#if loginErr}}
+        <p class="error" id="mylocation">{{loginErr}}</p>
+        {{/if}}
+        <div class="form-group">
+            <label>Id</label>
+            <input type="text" class="form-control" name="Email">
+            <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+        <br>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" name="Password">
+
+
+            <button type="submit" class="btn btn-primary mt-5" style="">Login</button>
+    </form>
+</div>
+
+<script  type="text/javascript">  
+function validateform(){  
+var name=document.myform.Email.value;  
+var password=document.myform.Password.value;  
+  
+if (name==null || name==""){  
+    msg="Id can't be blank"
+  document.getElementById('mylocation').innerText=msg;  
+  return false;  
+}else if(password==null ||password==""){  
+    msg="Password please check."
+  document.getElementById('mylocation').innerText=msg;  
+  return false;  
+  }  
+}  
+</script> 
